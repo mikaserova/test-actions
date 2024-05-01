@@ -5,8 +5,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     name: test-job-1
-    container:
-      build: .
     steps:
-      - name: s1
-        run: echo "3"
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: mikaserova/test-actions/.github/actions/hello@main
+        with:
+          who-to-greet: 'Mona the Octocat'
