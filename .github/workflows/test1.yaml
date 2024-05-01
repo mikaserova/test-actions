@@ -1,0 +1,12 @@
+on:
+  push:
+
+jobs:
+  job1:
+  runs-on: ubuntu-latest
+  name: test-job-1
+  container:
+    build: .
+  steps:
+    - name: s1
+      run: echo "3"
