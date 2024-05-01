@@ -1,2 +1,2 @@
-from python3.12
-run pip install flask
+FROM python:3.12
+RUN pip install flask
